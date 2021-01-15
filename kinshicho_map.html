@@ -1,0 +1,66 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>墨田区</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+        <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <center>
+<h1>一人暮らし用の賃貸物件探しサイト<br>〜犯罪情報の可視化〜</h1>
+             <a href="mitaka_map.html" class="btn-circle-flat3">三鷹市</a>
+            <a href="kinshicho_map.html" class="btn-circle-flat">墨田区</a>
+            <a href="toshimaku_map.html" class="btn-circle-flat2">豊島区</a>
+
+    <div id="map"></div>
+    <script type="text/javascript" src="kinshicho_conveni.js"></script>
+    <script type="text/javascript" src="kinshicho_drugstore.js"></script>
+    <script type="text/javascript" src="kinshicho_hospital.js"></script>
+    <script type="text/javascript" src="kinshicho_supermarket.js"></script>
+    <script type="text/javascript" src="kinshicho_police.js"></script>
+     <script type="text/javascript" src="kinshicho_postoffice.js"></script>
+        <script type="text/javascript" src="sumidaku_hinanjo.js"></script>
+     <script type="text/javascript" src="sumida.js"></script>
+     <script type="text/javascript" src="kinshicho_map.js"></script>
+        
+    <script src="https://maps.googleapis.com/maps/api/js?language=ja&region=JP&key=AIzaSyAiV2ZbFIYuD3N4hzGLstSn2e4ZG5A7QlU&callback=initMap&libraries=places" async defer></script>
+    </center>
+    <form>
+        <center>
+             <image src="hanzai2.png" width="180px" height="50px" ></image>
+            <div class="mycheckbox">
+          <b> 
+            <font color="#008080">
+       <p>★ 犯罪マップ </p>  
+            </font>
+            </b> 
+    <input id="sample11" value="1" type="checkbox" onclick="initMap(1);"><label for="sample11">全ての犯罪</label>
+　　　<input id="sample12" value="1" type="checkbox" onclick="initMap(2);"><label for="sample12">粗暴犯</label>　
+　　 <input id="sample13" value="1" type="checkbox" onclick="initMap(3);"><label for="sample13">侵入窃盗犯</label>
+     <b> <font color="#008080">
+         <p>★ 浸水マップ</p>
+            </font>
+            </b> 
+       <input id="sample16" value="1" type="checkbox" onclick="initMap(10);"><label for="sample16">洪水・浸水</label>
+        <b> 
+         <font color="#008080">
+          <p>★ 家賃相場 </p></font></b>
+    <input id="sample1" value="1" type="checkbox" onclick="six();"><label for="sample1">6〜7万</label>
+    <input id="sample2" value="1" type="checkbox" onclick="seven();"><label for="sample2">7〜8万</label>
+    <input id="sample3" value="1" type="checkbox" onclick="eight();"><label for="sample3">8〜9万</label>
+     <input id="sample4" value="1" type="checkbox" onclick="all2();"><label for="sample4">全表示</label>
+       <b><font color="#008080"><p>★ 周辺の施設情報 </p></font></b>
+    <input id="sample5" value="1" type="checkbox" onclick="Conveni();"><label for="sample5">コンビニ</label>
+    <input id="sample6" value="1" type="checkbox"onclick="Drug();"><label for="sample6">薬局</label>
+    <input id="sample7" value="1" type="checkbox"onclick="Super();"><label for="sample7">スーパー</label>
+     <input id="sample8" value="1" type="checkbox"onclick="Hospital();"><label for="sample8">病院</label>
+     <input id="sample9" value="1" type="checkbox"onclick="Police();"><label for="sample9">警察</label>
+     <input id="sample10" value="1" type="checkbox"onclick="Post();"><label for="sample10">郵便局</label>
+       <input id="sample15" value="1" type="checkbox"onclick="Hinanjo();"><label for="sample15">避難所</label>
+</div>
+        </center>
+    </form>
+</body>
+</html>
