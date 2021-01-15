@@ -1,0 +1,169 @@
+@charset="utf-8";
+
+body {
+    background-color: #f2f2f2;
+    font-family: "Lato";
+    font-weight: 300;
+    font-size: 16px;
+    color: #555;
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+    margin-top: 70px;
+}
+
+#map {
+    height: 80%;
+    width: 80%;
+}
+  
+.home{
+    position:auto; /* 今の位置を基準 */
+     top: 20px; /* 上から10px */
+     left: 30px; /* 左から20px */
+}
+
+
+.btn-circle-flat {
+  display: inline-block;
+  text-decoration: none;
+  background: #b8c0ca;
+  color: #FFF;
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+  transition: .4s;
+}
+.btn-circle-flat:hover {
+  background: #668ad8;
+}
+.btn-circle-flat2 {
+  display: inline-block;
+  text-decoration: none;
+  background: #b8c0ca;
+  color: #FFF;
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+  transition: .4s;
+}
+.btn-circle-flat2:hover {
+  background: #bf5a85;
+}
+.btn-circle-flat3 {
+  display: inline-block;
+  text-decoration: none;
+  background: #c7ba29;
+  color: #FFF;
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+  transition: .4s;
+}
+.btn-circle-flat3:hover {
+  background: #c7ba29;
+}
+
+/* 元々のチェックボックス（非表示） */
+.mycheckbox input[type="checkbox"]{
+    display: none;
+}
+/* チェックボックスの代わりを成すラベル */
+.mycheckbox input[type="checkbox"]+label{
+    display: none;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    padding-left: 25px;
+    padding-right: 10px;
+}
+/* ラベルの左に表示させる正方形のボックス□ */
+.mycheckbox input[type="checkbox"]+label::before{
+    content: "";
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    left: 0;
+    top: 50%;
+    border: 1px solid;
+    border-color:  #b1afa5; 
+    background-color: #f0f0f0; 
+}
+/* チェックが入った時のレ点 */
+.mycheckbox input[type="checkbox"]:checked+label::after{
+    content: "";
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    width: 18px;
+    height: 9px;
+    margin-top: -9px;
+    top: 50%;
+    left: 3px;
+    transform: rotate(-45deg);
+    border-bottom: 3px solid;
+    border-left: 3px solid;
+    border-color:  #948434; 
+}
+
+ .switch {
+        margin-top: 4px;
+        margin-left: 15px;
+        font-size:24px;
+        padding: 2px;
+    }
+    .switch input[type=checkbox]{
+        position: absolute;
+        opacity: 0;
+    }
+    .switch label {
+        width: 2em;
+        height: 2em;
+        position: relative;
+        cursor: pointer;
+        display: block;
+    }
+    .switch label:before {
+        content: '';
+        position: absolute;
+        width: 2em;
+        height: 1em;
+        left: 0.1em;
+        transition: background 0.1s ease;
+        background: #f1f1f1;
+        border-radius: 50px;
+        box-shadow: inset 0px 1px 1px rgba(171,66,63,0.5);
+    }
+    .switch label:after {
+        content:'';
+        position: absolute;
+        width: 1em;
+        height: 1em;
+        border-radius: 50px;
+        left: 0;
+        transition : all 0.2s ease;
+        box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.3);
+        background: #fcfff4;
+        animation: swich-off .2s ease-out;
+        z-index:2;
+    }
+    .switch input[type=checkbox]:checked+label:before {
+        background:#e27d87;
+        box-shadow: inset 0px 1px 1px rgba(84,152,140,0.5);
+    }
+    .switch input[type=checkbox]:checked+label:after {
+        animation: switch-on .2s ease-out;
+        left: 1.1em;
+    }
+      
